@@ -9,19 +9,21 @@
 </head>
 <body>
     <main>
-        <div class="principal-container">
+        <div class="principal-container center">
             <div class="itens-container">
                     <img src="assets/css/img/logo-minecraft.png" alt="minecraft logo" class="minecraft-img">
                     <img src="assets/css/img/logo-quiz.png" alt="quiz logo" class="quiz-img">
-                    <button class="btn-jogar">Jogar</button>
+                    <a class="btn-jogar">Jogar</a>
+                   
             </div>
             <div class="audio-mute-container">
-                <img src="assets/css/img/audio-mute.png" alt="imagem icon audio mutado" class="audio-mute-img">
+                <img src="assets/css/img/audio-mute.png" alt="imagem icon audio mutado" class="audio-mute-img" onclick="toggleMute()">
             </div>
             <div class="audio-container">
-                <img src="assets/css/img/audio.png" alt="imagem icon audio" class="audio-img">
+                <img src="assets/css/img/audio.png" alt="imagem icon audio" class="audio-img" onclick="toggleMute()">
             </div>
-          
+            <iframe id="youtube-audio" width="0" height="0" src="https://www.youtube.com/embed/videoseries?list=PL3817D41C7D841E23&autoplay=1&mute=0" frameborder="0" allow="autoplay"></iframe>
+
         </div>
     </main>
     <script src="script.js"></script>

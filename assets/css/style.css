@@ -1,10 +1,23 @@
+/*Estilos gerais*/
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button, a {
+    cursor: pointer;
+}
+
+
+/*Estilos tela inicial*/
 .principal-container {
     width: 100%;
     height: 100vh;
+    scroll-behavior: none;
+    background-size: cover;
+    background-repeat: no-repeat;
     background-image: url("/assets/css/img/fundo-1.jpg");
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .itens-container {
@@ -17,14 +30,16 @@
 }
 
 .minecraft-img {
-    width: 750px;
+    max-width: 750px;
+    width: 100%;
     position:absolute;
     transform: translate(0px);   
     animation: float 5s ease-in-out infinite;
 }
 
 .quiz-img {
-    width: 325px;
+    max-width: 325px;
+    width: 100%;
     margin-top: 250px;   
     transform: translate(0px);   
     animation: float 5s ease-in-out infinite;
@@ -56,6 +71,7 @@
     bottom: 0;
     left: 0;
     cursor: pointer;
+    visibility: visible;
 }
 
 .audio-mute-container {
@@ -63,13 +79,12 @@
     position: fixed;
     bottom: 0;
     left: 0;
-
+    visibility: hidden;
 }
 
 .audio-img {
     width: 20%;
     cursor: pointer;
-    visibility: hidden;
 }
 
 .audio-mute-img {
@@ -77,3 +92,15 @@
     cursor: pointer;    
 }
 
+/*Responsividade*/
+@media(max-width: 764px){
+    .minecraft-img {
+        width: 80%;
+        
+    }
+    
+    .quiz-img {
+        width: 50%;
+        margin-top: 150px;   
+    }  
+}
